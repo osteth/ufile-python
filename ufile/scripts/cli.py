@@ -23,6 +23,10 @@ def put(file):
 @click.option('-s', '--slug', help='Specifies the slug of the file you wish to download.')
 @click.option('-p', '--path', help='Specifies the location thats the downloaded file should be saved to.')
 def get(slug, path):
+    if path:
+        path = path
+    else:
+        path = slug
     response = ufile.download(USER, KEY, slug, path)
     click.echo(response)
     return()

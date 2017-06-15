@@ -18,7 +18,7 @@ def upload(SOURCEPATH, USER, KEY):
 
 def download(USER, KEY, SLUG, PATH):
     try:
-        response = requests.get('https://down.uploadfiles.io/get/' + str(SLUG), auth=(str(USER), str(KEY)), stream=True)
+        response = requests.get('https://up.uploadfiles.io/get/' + str(SLUG), auth=(str(USER), str(KEY)), stream=True)
     except:
         response = requests.get('http://down.uploadfiles.io/get/' + str(SLUG), auth=(str(USER), str(KEY)), stream=True)
     with open(PATH, 'wb') as f:

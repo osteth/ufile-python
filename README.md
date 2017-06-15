@@ -26,18 +26,18 @@ Then install locally.
 
 Finally, give the command line program a try.
 
-    ufiles --help
+    ufile --help
 
 ### Usage
-The ufilesup command is used to upload a file you your Uploadfiles.io account. 
+The ufile put command is used to upload a file you your Uploadfiles.io account. 
 ```sh
-$ ufilesup <file to upload>
+$ ufile out -f <file to upload>
 ```
 The ufilesdown command is used to download a file from you Uploadfiles.io account. 
 ```sh
-$ ufilesdown <SLUG> <SAVE PATH>
+$ ufile get -s <SLUG> -p <SAVE PATH>
 ```
-ufiles down can be used with or without a save pathe specified. if no save path is specified,the file will be save to the current directory using the slug as the filename. 
+ufiles down can be used with or without a save path specified. if no save path is specified,the file will be save to the current directory using the slug as the filename. 
 
 License
 ----
