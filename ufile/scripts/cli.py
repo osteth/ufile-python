@@ -14,16 +14,18 @@ def cli():
 
 @click.command(help='upload a file to Uploadfiles.io')
 @click.option('-f', '--file', help='Specifies the File that should be uploaded.')
-def up(file):
+def put(file):
     response = ufile.upload(file, USER, KEY)
     click.echo(response)
     return()
 
 @click.command(help='Download a file from Uploadfiles.io')
 @click.option('-s', '--slug', help='Specifies the slug of the file you wish to download.')
-def down(slug):
-    ufile.download(USER, KEY, slug)
+@click.option('-p', '--path', help='Specifies the location thats the downloaded file should be saved to.')
+def get(slug, path):
+    response = ufile.download(USER, KEY, slug, path)
+    click.echo(response)
     return()
 
-cli.add_command(up)
-cli.add_command(down)
+cli.add_command(put)
+cli.add_command(get)
