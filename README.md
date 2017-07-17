@@ -31,7 +31,7 @@ Finally, give the command line program a try.
 ### Usage
 The ufile put command is used to upload a file you your Uploadfiles.io account. 
 ```sh
-$ ufile out -f <file to upload>
+$ ufile put -f <file to upload>
 ```
 The ufilesdown command is used to download a file from you Uploadfiles.io account. 
 ```sh
